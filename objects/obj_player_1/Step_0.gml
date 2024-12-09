@@ -8,7 +8,7 @@ depth = -1;
 
 
 //jump
-if (keyboard_check_pressed(vk_space)) {
+if (keyboard_check_pressed(vk_space) && jumps_left>0) {
     y_vel -= 5; 
     jumps_left -= 1; 
 	audio_play_sound(snd_tomato, 10, false);

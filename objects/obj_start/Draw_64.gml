@@ -37,6 +37,9 @@ if (state == "dialog") {
 
         // Draw the choice box
         draw_set_color(c_black);
+		if (hovered_choice_index == i) {
+			draw_rectangle_colour(choice_x, choice_y, choice_x + choice_box_width, choice_y + choice_box_height, c_black, c_white, c_black, c_white, false);
+		}
         draw_rectangle(choice_x, choice_y, choice_x + choice_box_width, choice_y + choice_box_height, false);
 
         // choice text centered within the box
@@ -48,4 +51,3 @@ if (state == "dialog") {
         draw_text(text_x, text_y, text);
     }
 }
-

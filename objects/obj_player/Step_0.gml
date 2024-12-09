@@ -76,6 +76,7 @@ while (to_move_y != 0) {
                 y_vel = 0;
                 r_y = 0;
                 to_move_y = 0;
+				jumps_left = 2
                 break;
             }
         }

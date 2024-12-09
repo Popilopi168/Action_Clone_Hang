@@ -3,3 +3,5 @@
 
 
 click_count = 0;
+
+end_text = []

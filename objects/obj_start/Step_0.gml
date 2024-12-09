@@ -20,16 +20,12 @@ if (state == "dialog") {
         }
     }
 } else if (state == "choices") {
+	var prev_hovered_choice_index = hovered_choice_index;
     // Handle choice selection
     if (mouse_check_button_pressed(mb_left)) {
         // Use different variable names to avoid conflicts with built-in variables
-        var gui_mouse_x = device_mouse_x_to_gui(0); // Convert mouse position to GUI coordinates
+        var gui_mouse_x = device_mouse_x_to_gui(0); 
         var gui_mouse_y = device_mouse_y_to_gui(0);
-
-        // Ensure the functions take no arguments
-        // If they require arguments in your version, use 0 as the mouse device index
-        // var gui_mouse_x = device_mouse_x_to_gui(0);
-        // var gui_mouse_y = device_mouse_y_to_gui(0);
 
         var choice_box_width = 200;
         var choice_box_height = 50;
@@ -44,6 +40,12 @@ if (state == "dialog") {
             // Check if mouse is over this choice
             if (gui_mouse_x >= choice_x && gui_mouse_x <= choice_x + choice_box_width &&
                 gui_mouse_y >= choice_y && gui_mouse_y <= choice_y + choice_box_height) {
+					
+				// hover for choice
+				hovered_choice_index = i;
+				if (hovered_choice_index != prev_hovered_choice_index) {
+	                audio_play_sound(snd_hover, 1, false);
+	            }
 
                 // A choice was selected
                 selected_choice = opt_list[i];
@@ -53,8 +55,11 @@ if (state == "dialog") {
                     dialog_text = tomato_text;
                 } else if (selected_choice == "lettuce") {
                     dialog_text = lettuce_text;
+					global.player_sprite_choice = "lettuce";
                 } else if (selected_choice == "human") {
                     dialog_text = human_text;
+					sprite_index = spr_potato_split_2;
+					global.player_sprite_choice = "human";
                 }
 
                 // Reset dialog variables

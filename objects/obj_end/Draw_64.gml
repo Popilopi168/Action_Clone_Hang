@@ -17,6 +17,7 @@ draw_sprite(spr_fries, 0, x, y);
 
 if ( mouse_check_button_pressed(mb_left) && click_count<5) {
 	 audio_play_sound(snd_tomato, 10, false);
+	 
 	draw_sprite(spr_fries, 0, 
 	random_range(60,900),
 	random_range(30, 600 - 30));
