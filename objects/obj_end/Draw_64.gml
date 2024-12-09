@@ -12,6 +12,7 @@ draw_set_colour(c_yellow);
 
 score_string = string("You successfully made fries!");
 draw_text(cx+cw/2, cy+32, score_string);
+draw_text(room_width/2 - string_length(end_text) /2, room_height/2, end_text);
 
 draw_sprite(spr_fries, 0, x, y);
 

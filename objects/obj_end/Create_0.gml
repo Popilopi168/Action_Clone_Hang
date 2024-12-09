@@ -4,4 +4,5 @@
 
 click_count = 0;
 
-end_text = []
+end_text = "Wanna some butter or ketchup?";
+
