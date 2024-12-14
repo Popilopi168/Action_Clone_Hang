@@ -4,6 +4,7 @@
 
 with (other){
 	if (other.colliding == true){
+		other.image_index = (other.image_index + 1) % 3;
 		sprite_index = spr_tiny_cloud_poof;
 
 		image_index = 1;

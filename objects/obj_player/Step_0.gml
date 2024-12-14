@@ -53,10 +53,10 @@ if(to_move_x >= dist_to_r_wall) {
 //find the y direction that we're moving
 var dir = sign(to_move_y);
 if (dir>0){
-	image_index = 1;
+	//image_index = 1;
 } 
 else{
-	image_index = 2;
+	//image_index = 2;
 }
 
 
@@ -87,9 +87,8 @@ while (to_move_y != 0) {
     if (collidewith_cloud != noone) {
         colliding = true;
         // Stop movement upon collision
-        y_vel = 0;
-        r_y = 0;
-        to_move_y = 0;
+        y_vel = -2;
+
         // Call the collision event with the cloud
         with (collidewith_cloud) {
             event_perform(ev_collision, obj_player);

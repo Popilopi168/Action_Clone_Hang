@@ -13,14 +13,14 @@ tomato_text = [
     "As a potato, your high starch content makes you easier to store.",
     "Imagine being transformed into crispy fries—no matter how long you've been stored, people will always love you!",
     "You're about to receive affection from all kinds of people.",
-    "Do me a favor, collect as much bubble as you can. Then I will help you as much as I can."
+    "Do me a favor, collect 20 bubbles if you can. Then I will help you as much as I can."
 ];
 
 lettuce_text = ["Ah, a lettuce! Dialog in this chapter is under contruction.",
-				"Okay actually I'm joking, the goal for the assignment is to have a complete playable version ao I will not leave here as blank",
+				"Okay actually I'm joking, the goal for the assignment is to have a complete playable version so I will not leave here as blank",
 				"It just the author kinda stuck at giving you a proper background story, but also do not want you insert some random GPT generated stuff here...", 
 				"They hate lettuce (actually they just hate all green vegetables so don't take it personally hahah)",
-				"Anyway just collect the bubble for me, I will find a reason for this later...(?"];
+				"Anyway just collect 20 bubbles for me, I will find a reason for this later...(Maybe?"];
 human_text = ["Eh, a human...",
 				"Sorry could you just keep away from me a little bit? I'm allergic to humankind...",
 				"Oh I'm gonna pinch my nose if I have one...",
@@ -39,7 +39,7 @@ window_box_width = 280 * 2;
 window_box_height = 80 * 2;
 text_padding = 20;
 line_spacing = 20;
-max_width = window_box_width - 20;
+max_width = window_box_width - 40;
 box_x = (view_wport[0] - window_box_width) / 2;
 box_y = view_hport[0] - window_box_height - 20;
 

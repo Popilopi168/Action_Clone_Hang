@@ -1,7 +1,18 @@
+
 if (state == "dialog") {
     // Existing code to handle advancing the dialog
     if (waiting_for_click && mouse_check_button_pressed(mb_left)) {
         audio_play_sound(snd_tomato, 10, false);
+		
+		var audio = irandom_range(1, 3);
+		if (audio == 1){
+			audio_play_sound(snd_p1, 10, false);
+		} else if (audio == 2) {
+			audio_play_sound(snd_p2, 10, false);
+		} else if (audio == 3) {
+			audio_play_sound(snd_p3, 10, false);
+		}
+		
         waiting_for_click = false; // Reset the waiting flag
         current_text_index += 1; // Move to the next text line
 
@@ -53,6 +64,7 @@ if (state == "dialog") {
                 // Load the corresponding text based on the selection
                 if (selected_choice == "tomato") {
                     dialog_text = tomato_text;
+					global.player_sprite_choice = "tomato";
                 } else if (selected_choice == "lettuce") {
                     dialog_text = lettuce_text;
 					global.player_sprite_choice = "lettuce";
